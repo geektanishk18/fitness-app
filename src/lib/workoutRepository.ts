@@ -6,6 +6,15 @@ import { getAuthenticatedUser, supabase } from './supabase'
 const setSchema = z.object({ weight: z.number().finite().nonnegative(), reps: z.number().int().positive(), completed: z.boolean() })
 export type WorkoutHistoryItem = { id: string; sessionDate: string; status: 'in_progress' | 'completed'; completedAt: string | null }
 
+export async function listWorkoutHistory(): Promise<WorkoutHistoryItem[]> {
+  if (!supabase) return []
+  const user = await getAuthenticatedUser()
+  if (!user) return []
+  const { data, error } = await supabase.from('workout_sessions').select('id, session_date, status, completed_at').eq('user_id', user.id).order('session_date', { ascending: false }).limit(100)
+  if (error) throw new Error('Workout history could not be loaded from Supabase.')
+  return (data ?? []).map((item) => ({ id: item.id as string, sessionDate: item.session_date as string, status: item.status as WorkoutHistoryItem['status'], completedAt: item.completed_at as string | null }))
+}
+
 export async function loadOrCreateWorkout(): Promise<{ mode: 'supabase'; sessionId: string; workout: WorkoutState; history: WorkoutHistoryItem[] } | { mode: 'demo'; reason: string }> {
   if (!supabase) return { mode: 'demo', reason: 'Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to enable sync.' }
   const user = await getAuthenticatedUser()

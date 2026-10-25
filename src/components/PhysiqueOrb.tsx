@@ -1,23 +1,3 @@
-import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Sphere } from '@react-three/drei'
-import { useRef } from 'react'
-import type { Mesh } from 'three'
-
-function Orb() {
-  const ref = useRef<Mesh>(null)
-  useFrame((_, delta) => { if (ref.current) ref.current.rotation.y += delta * 0.12 })
-  return (
-    <group ref={ref}>
-      <Sphere args={[1.5, 32, 32]} scale={[0.78, 1.18, 0.5]}>
-        <meshStandardMaterial color="#c9f36a" roughness={0.55} metalness={0.12} wireframe />
-      </Sphere>
-      <Sphere args={[0.8, 24, 24]} scale={[1.35, 0.52, 0.65]} position={[0, 0.38, 0]}>
-        <meshStandardMaterial color="#d9ff8f" roughness={0.55} metalness={0.1} wireframe />
-      </Sphere>
-    </group>
-  )
-}
-
 export function PhysiqueOrb() {
-  return <div className="orb-wrap" aria-label="Abstract physique focus visual"><Canvas camera={{ position: [0, 0, 5] }} dpr={[1, 1.5]}><ambientLight intensity={1.6} /><pointLight position={[3, 2, 4]} intensity={8} color="#d7ff77" /><Orb /><OrbitControls enableZoom={false} enablePan={false} autoRotate={false} /></Canvas></div>
+  return <div className="orb-wrap" role="img" aria-label="Abstract physique focus visual"><svg viewBox="0 0 300 300" aria-hidden="true"><defs><radialGradient id="orbGlow"><stop stopColor="#c9f36a" stopOpacity=".22"/><stop offset="1" stopColor="#c9f36a" stopOpacity="0"/></radialGradient></defs><circle cx="150" cy="150" r="135" fill="url(#orbGlow)"/><g fill="none" stroke="#c9f36a" strokeOpacity=".7"><ellipse cx="150" cy="150" rx="78" ry="118"/><ellipse cx="150" cy="150" rx="78" ry="118" transform="rotate(25 150 150)"/><ellipse cx="150" cy="150" rx="78" ry="118" transform="rotate(50 150 150)"/><ellipse cx="150" cy="150" rx="78" ry="118" transform="rotate(75 150 150)"/><path d="M72 150h156M84 105h132M84 195h132M101 65h98M101 235h98" strokeOpacity=".35"/><ellipse cx="150" cy="116" rx="86" ry="40" stroke="#d9ff8f" strokeWidth="1.4"/><ellipse cx="150" cy="116" rx="86" ry="40" transform="rotate(12 150 116)" strokeOpacity=".45"/></g></svg></div>
 }

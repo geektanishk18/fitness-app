@@ -1,8 +1,8 @@
-import { BarChart3, Dumbbell, LayoutDashboard, Settings, Utensils } from 'lucide-react'
+import { BarChart3, Dumbbell, LayoutDashboard, Settings, Utensils, Sparkles } from 'lucide-react'
 import type { NavKey } from '../types'
 
 const items: { key: NavKey; label: string; icon: typeof LayoutDashboard }[] = [
-  { key: 'dashboard', label: 'Today', icon: LayoutDashboard }, { key: 'workout', label: 'Train', icon: Dumbbell }, { key: 'progress', label: 'Progress', icon: BarChart3 }, { key: 'nutrition', label: 'Fuel', icon: Utensils }, { key: 'settings', label: 'Profile', icon: Settings },
+  { key: 'dashboard', label: 'Today', icon: LayoutDashboard }, { key: 'workout', label: 'Train', icon: Dumbbell }, { key: 'progress', label: 'Progress', icon: BarChart3 }, { key: 'nutrition', label: 'Fuel', icon: Utensils }, { key: 'coaching', label: 'Coach', icon: Sparkles }, { key: 'settings', label: 'Profile', icon: Settings },
 ]
 
 export function BottomNav({ active, onChange }: { active: NavKey; onChange: (key: NavKey) => void }) {

@@ -13,16 +13,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^10.7.6",
-    "@react-three/fiber": "^9.3.0",
+    "@supabase/supabase-js": "^2.75.0",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.468.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4",
     "recharts": "^3.2.1",
-    "@supabase/supabase-js": "^2.75.0",
-    "three": "^0.180.0",
     "zod": "^4.1.12"
   },
   "devDependencies": {
@@ -31,7 +28,6 @@
     "@types/node": "^24.8.1",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
-    "@types/three": "^0.180.0",
     "@vitejs/plugin-react": "^5.0.4",
     "eslint": "^9.37.0",
     "eslint-plugin-react-hooks": "^6.1.1",

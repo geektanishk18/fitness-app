@@ -4,7 +4,7 @@
 
 **Goal:** Deliver a secure, testable, deployable fitness PWA in independently verifiable phases.
 
-**Architecture:** A Vite React client separates UI from domain logic, data access, and server integrations. Supabase provides auth and persistence with RLS; Vercel hosts the app; Groq is accessed only server-side through bounded, validated requests.
+**Architecture:** A Vite React client separates UI from domain logic, data access, and server integrations. During the architecture-first milestone, local/mock repositories are the active runtime and Supabase/Groq adapters are preparation-only seams. Vercel hosts the app; future privileged integrations remain server-side and bounded.
 
 **Tech Stack:** React, Vite, strict TypeScript, Tailwind CSS, Supabase, Zod, Recharts, Vitest, Playwright, Vercel, Groq.
 
@@ -16,53 +16,68 @@
 - [x] Add `AGENTS.md`, root documentation, `.agent/skills/`, and this plan.
 - [x] Establish testing, security, documentation, and phase-gate conventions.
 
-## Phase 1 — Application foundation
+## Phase 1 — Application foundation (complete)
 
-- [ ] Define acceptance criteria and inspect current scaffold.
+- [x] Define acceptance criteria and inspect current scaffold.
 - [x] Initialize/configure React/Vite, TypeScript strict mode, Tailwind-ready CSS tokens, linting, Vitest, and Playwright-ready tooling.
-- [ ] Establish design tokens, responsive shell, navigation, and dashboard skeleton.
-- [ ] Add reliable PWA manifest/install foundation.
-- [ ] Verify lint, typecheck, unit tests, E2E smoke flow, and production build.
+- [x] Establish design tokens, responsive shell, navigation, and dashboard skeleton.
+- [x] Add reliable PWA manifest/install foundation.
+- [x] Verify lint, typecheck, unit tests, E2E smoke flow, and production build.
 
-## Phase 2 — Supabase integration
+## Phase 2 — Training plans and adaptive scheduling
 
-- [x] Define migrations for profiles and user-owned domain tables.
-- [x] Add RLS policies and a public-client repository boundary.
-- [x] Add `.env.example`, demo fallback, workout persistence, history retrieval, and schema documentation.
-- [ ] Apply the migration to a configured Supabase project and verify authenticated isolation.
+- [ ] Define the six-day template, typed availability, overrides, and history-safe schedule contracts.
+- [ ] Implement pure 4/5/6-day scheduling with recovery constraints and deterministic output.
+- [ ] Add a local/mock schedule repository seam and connect the dashboard/workout views.
+- [ ] Verify scheduler edge cases, UI flow, lint, typecheck, and production build.
 
-## Phase 3 — Adaptive scheduler
+## Phase 3 — Complete workout logging, history, and progression
 
-- [ ] Define training domain types and six-day template.
-- [ ] Implement pure 4/5/6-day scheduling, recovery constraints, availability changes, and manual overrides.
-- [ ] Add deterministic unit tests for history preservation and edge cases.
-
-## Phase 4 — Active workout mode
-
-- [ ] Implement sessions, exercise logging, rest timer, history, and progressive-overload summaries.
+- [x] Reuse the local/mock workout repository seam for session state and history.
+- [ ] Add progressive-overload summaries and richer history views.
 - [ ] Add unit/integration tests and critical mobile E2E coverage.
 
-## Phase 5 — Nutrition
+## Phase 4 — Nutrition tracking (complete)
 
-- [ ] Add food records, calories, macros, and daily summaries with validation.
-- [ ] Document data contracts and verify calculations.
+- [x] Add food records, calories, macros, and daily summaries with validation.
+- [x] Add Indian food data contracts and local/mock nutrition persistence.
+- [x] Verify calculations and critical mobile flows.
 
-## Phase 6 — Transformation tracking
+## Phase 5 — Transformation tracking (complete)
 
-- [ ] Add weight, measurements, photos, charts, and trend analysis.
-- [ ] Verify private storage access and chart behavior.
+- [x] Add weight, measurements, photos, charts, and trend analysis.
+- [x] Verify local private-record boundaries and chart behavior.
 
-## Phase 7 — Basic AI coaching
+## Phase 6 — AI coaching interface and recommendation architecture (complete)
 
-- [ ] Add bounded server-side Groq integration and schemas.
-- [ ] Store validated insights with explicit failure handling.
-- [ ] Verify no client secret exposure and no autonomous mutations.
+- [x] Add bounded recommendation contracts and a simulated coaching interface.
+- [x] Document the future server-side provider adapter without enabling credentials.
+- [x] Verify no client secret exposure and no autonomous mutations.
 
-## Phase 8 — Deployment and verification
+## Phase 7 — Profile, personalization, settings, and preferences (complete)
 
-- [ ] Configure Vercel environment variables and deployment procedure.
-- [ ] Verify production build, PWA installation, offline behavior, auth isolation, and critical workflows.
-- [ ] Update deployment guide, known limitations, and changelog.
+- [x] Add profile, goals, preferences, settings, and personalization flows.
+- [x] Persist locally with validation and explicit local-state labels.
+- [x] Verify accessible forms and shared nutrition target wiring.
+
+## Phase 8 — PWA, offline functionality, and synchronization architecture (complete)
+
+- [x] Add install metadata, app icon, service worker, and app-shell/runtime asset caching.
+- [x] Persist active workout state and queue local set/session mutations with retry/conflict contracts.
+- [x] Surface online/offline state and local pending changes; keep runtime sync explicitly inactive.
+- [x] Verify manifest assets, app-shell cache, offline reload, workout edit persistence, and online-return pending state in Chrome/Playwright.
+
+## Phase 9 — Backend integration architecture (complete; unapplied by design)
+
+- [x] Keep schema, RLS, environment, and repository boundaries documented without requiring credentials.
+- [x] Define entity relationships, API contracts, ownership/RLS requirements, auth/AI boundaries, migration strategy, config, and portability.
+- [x] Define typed repository, sync transport, archive, and environment contracts without a remote adapter.
+
+## Phase 10 — Final testing, visual refinement, performance, and release preparation (complete)
+
+- [x] Run lint, type/build, unit, browser E2E, and core-module UI smoke checks.
+- [x] Replace the decorative WebGL visual with an SVG treatment and split heavy vendors; largest chunk is now below the warning threshold.
+- [x] Update deployment guide, known limitations, changelog, and deploy a verified Preview.
 
 ## Phase gate
 
