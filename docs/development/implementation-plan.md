@@ -26,10 +26,10 @@
 
 ## Phase 2 — Supabase integration
 
-- [ ] Define migrations for profiles and user-owned domain tables.
-- [ ] Add RLS policies and server-side access patterns.
-- [ ] Add auth/profile flows, seed strategy, `.env.example`, and schema documentation.
-- [ ] Verify authenticated isolation and migration checks.
+- [x] Define migrations for profiles and user-owned domain tables.
+- [x] Add RLS policies and a public-client repository boundary.
+- [x] Add `.env.example`, demo fallback, workout persistence, history retrieval, and schema documentation.
+- [ ] Apply the migration to a configured Supabase project and verify authenticated isolation.
 
 ## Phase 3 — Adaptive scheduler
 
