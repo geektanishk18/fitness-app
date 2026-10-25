@@ -2,7 +2,7 @@
 
 ## Boundaries
 
-The web client owns presentation and user interaction. Domain modules own scheduling, nutrition calculations, and transformation summaries. Supabase owns authentication, PostgreSQL persistence, storage, and selected Edge Functions. Server-side routes/functions own privileged work and the Groq integration. Vercel hosts the application.
+The Vite React client owns presentation and user interaction. Domain modules own scheduling, nutrition calculations, and transformation summaries. Supabase owns authentication, PostgreSQL persistence, storage, and selected Edge Functions. Server-side routes/functions own privileged work and the Groq integration. Vercel hosts the application.
 
 ## Data flow
 

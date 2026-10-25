@@ -16,4 +16,4 @@ Phase 0 engineering setup is complete. Application implementation begins only af
 
 ## Planned stack
 
-Next.js App Router, strict TypeScript, Tailwind CSS, Supabase, Zod, Vitest, Playwright, Recharts, and Vercel. See `docs/architecture/decisions.md` for rationale and constraints.
+React + Vite, strict TypeScript, Tailwind CSS, Supabase, Zod, Vitest, Playwright, Recharts, and Vercel. See `docs/architecture/decisions.md` for rationale and constraints.

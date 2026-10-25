@@ -4,9 +4,9 @@
 
 **Goal:** Deliver a secure, testable, deployable fitness PWA in independently verifiable phases.
 
-**Architecture:** Next.js App Router separates UI, domain logic, data access, and server integrations. Supabase provides auth and persistence with RLS; Vercel hosts the app; Groq is accessed only server-side through bounded, validated requests.
+**Architecture:** A Vite React client separates UI from domain logic, data access, and server integrations. Supabase provides auth and persistence with RLS; Vercel hosts the app; Groq is accessed only server-side through bounded, validated requests.
 
-**Tech Stack:** Next.js, strict TypeScript, Tailwind CSS, Supabase, Zod, Recharts, Vitest, Playwright, Vercel, Groq.
+**Tech Stack:** React, Vite, strict TypeScript, Tailwind CSS, Supabase, Zod, Recharts, Vitest, Playwright, Vercel, Groq.
 
 ---
 
@@ -19,7 +19,7 @@
 ## Phase 1 — Application foundation
 
 - [ ] Define acceptance criteria and inspect current scaffold.
-- [ ] Initialize/configure Next.js, TypeScript strict mode, Tailwind, linting, Vitest, and Playwright.
+- [x] Initialize/configure React/Vite, TypeScript strict mode, Tailwind-ready CSS tokens, linting, Vitest, and Playwright-ready tooling.
 - [ ] Establish design tokens, responsive shell, navigation, and dashboard skeleton.
 - [ ] Add reliable PWA manifest/install foundation.
 - [ ] Verify lint, typecheck, unit tests, E2E smoke flow, and production build.

@@ -6,7 +6,7 @@ Project V-Taper is a mobile-first fitness PWA for adaptive hypertrophy training,
 
 ## Locked decisions
 
-- Next.js App Router, strict TypeScript, Tailwind CSS, Zod, Vitest, and Playwright.
+- React + Vite, strict TypeScript, Tailwind CSS, Zod, Vitest, and Playwright.
 - Supabase Auth/PostgreSQL/Storage/Edge Functions; Vercel hosting; Groq server-side AI.
 - Dark, mobile-first UI; deterministic six-day training template scheduled for 4, 5, or 6 days.
 - AI may recommend and summarize, but must not rewrite training programs or execute arbitrary actions.
