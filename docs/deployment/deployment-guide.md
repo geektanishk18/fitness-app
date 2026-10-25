@@ -1,0 +1,3 @@
+# Deployment Guide
+
+Vercel serves the static Vite PWA. The existing Production Marketplace variables `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (or `NEXT_PUBLIC_SUPABASE_ANON_KEY`) are allowlisted into the browser build; the legacy `VITE_SUPABASE_*` pair remains supported for local work. These public keys rely on RLS. `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `POSTGRES_URL`, and `GROQ_API_KEY` remain server-only and are not injected into the client. Supabase public variables are not configured for Preview/Development yet. `.env.example` contains placeholders only. Offline queue data is not a cloud backup, and pre-existing local records/photos are not bulk-uploaded.

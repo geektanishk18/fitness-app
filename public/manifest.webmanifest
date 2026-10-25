@@ -1,0 +1,13 @@
+{
+  "name": "V-Taper Fitness",
+  "short_name": "V-Taper",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0e0d",
+  "theme_color": "#0b0e0d",
+  "description": "A focused fitness transformation workspace.",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "categories": ["health", "fitness"],
+  "icons": [{ "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

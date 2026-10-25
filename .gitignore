@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vercel/
+.env
+.env.local
+playwright-report/
+test-results/
+
+.vercel
+
+supabase/.temp/
+supabase/.branches/
